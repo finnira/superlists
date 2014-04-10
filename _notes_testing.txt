@@ -1,0 +1,8 @@
+
+Testing with unittest:
+    inherit from unittest.TestCase
+    unittest.main()
+
+Testing with django:
+    in tests.py, inherit from django.test.TestCase
+    python manage.py test

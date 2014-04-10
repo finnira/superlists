@@ -1,0 +1,54 @@
+
+To get git:
+	(next time just get it from http://msysgit.github.io/ )
+	or: install github for windows, go to %localappdata%\GitHub\,
+	copy PortableGit to E:\PortableGit, uninstall
+
+To use git:
+	cmd in code folder
+		g
+	where g.bat contains: E:\PortableGit\git-cmd.bat
+	This opens a new cmd window.
+
+Make sure to 'show hidden files & folders' as the .git folder is hidden.
+
+To set notepad++ as the git core.editor:
+	git config core.editor "'C:\Program Files (x86)\Notepad\notepad++.exe' -multiInst -nosession -noPlugin"
+
+	http://stackoverflow.com/questions/10564/how-can-i-set-up-an-editor-to-work-with-git-on-windows/7549705
+
+#	In short, for a shell in the project folder with git available:
+#		_cmd
+#			g
+
+git status gives warning about changing line endings from LF to CRLF:
+	search and replace in Notepad++, or open each py file in Pycharm after checking project options
+	(reason enough to not use Notepad on Windows: it doesn't recognise line endings other than CRLF -
+	django's manage.py and git's commit generate LF-ending files)
+
+
+Add to .gitignore:
+	( echo "__pycache__" >> .gitignore )
+	only use the quotes if using bash, not cmd.
+
+Copy from working dir to staging area:
+	git add .
+
+Copy from staging area to repo:
+	git commit -m {summary}
+
+Copy from working dir to repo (skip git add) - does not include brand new files:
+	git commit -a
+
+Show changes between working dir and staging area:
+	git diff
+
+Show changes between staging area and repo:
+	git diff --cached
+or
+	got diff --staged
+
+Leave the diff display:
+	q
+or
+	:q

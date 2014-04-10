@@ -1,0 +1,1 @@
+E:\Testing\env\Scripts\activate.bat

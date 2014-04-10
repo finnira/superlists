@@ -1,0 +1,48 @@
+
+Install pip and virtualenv:
+	download and run pip-win
+
+Create env:
+	cmd in C:\Python32\Scripts
+		virtualenv E:\Testing\env
+
+	cmd in E:\Testing\env\Scripts
+		pip install django
+		pip install selenium
+
+
+To run all python scripts below:
+	cmd in E:\Testing\env\Scripts
+		activate
+		cd ..\..
+		cd superlists
+		python *module* *args*
+
+or:
+	cmd in E:Testing\superlists
+		a
+	where a.bat contains: E:\Testing\env\Scripts\activate.bat
+
+To make a cmd shortcut in superlists:
+	Make a shortcut to C:\WINDOWS\System32\cmd.exe (or to  %COMSPEC% ) (named _cmd)
+	In the shortcut properties, change Start In to E:\Testing\superlists
+	Change the display settings in the Defaults menu (right-click on command
+	window title bar) to have QuickEdit mode in all the windows.
+
+#	In short, for a shell in the project folder with virtualenv available:
+#		_cmd
+#			a
+
+Create django project:
+	cmd in E:\Testing\env\Scripts
+		activate
+		cd ..\..
+		python env\Scripts\django-admin.py startproject superlists
+
+Create django app:
+		cd superlists
+		python manage.py startapp lists
+
+Run django server:
+		python manage.py runserver 8008
+	(will need to open another cmd window while running)
