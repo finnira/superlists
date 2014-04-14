@@ -40,13 +40,16 @@ Copy from staging area to repo:
 Copy from working dir to repo (skip git add) - does not include brand new files:
 	git commit -a
 
+Concise log:
+    git log --oneline
+
 Show changes between working dir and staging area:
 	git diff
 
 Show changes between staging area and repo:
 	git diff --cached
 or
-	got diff --staged
+	git diff --staged
 
 Leave the diff display:
 	q

@@ -15,7 +15,8 @@ class NewVisitorTest(unittest.TestCase):
 
     def setUp(self):
         self.browser = webdriver.Firefox()
-        self.browser.implicitly_wait(3)  # give 3s for rendering
+        self.browser.implicitly_wait(3)
+        # if the item tested for is not found, give it another 3s for rendering
 
 
     def tearDown(self):
@@ -48,3 +49,5 @@ class NewVisitorTest(unittest.TestCase):
 if __name__ == '__main__':
 
     unittest.main(warnings='ignore')
+    # "suppresses a superfluous ResourceWarning which was being emitted at
+    # the time of writing"
