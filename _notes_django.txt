@@ -1,0 +1,11 @@
+Forms:
+
+    The POST request parameters are the 'name' attribute of
+    the elements inside the form.
+
+    CSRF token:
+        <form method="POST">
+            <!-- input tags -->
+            {% csrf_token %}
+        </form>
+        https://docs.djangoproject.com/en/dev/ref/contrib/csrf/
