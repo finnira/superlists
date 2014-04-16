@@ -9,3 +9,12 @@ Forms:
             {% csrf_token %}
         </form>
         https://docs.djangoproject.com/en/dev/ref/contrib/csrf/
+
+
+Models:
+
+    Check models for errors:
+        python manage.py validate
+
+    View DDL:
+        python manage.py sqlall lists
