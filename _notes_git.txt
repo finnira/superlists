@@ -40,8 +40,8 @@ Copy from staging area to repo:
 Copy from working dir to repo (skip git add) - does not include brand new files:
 	git commit -a
 
-Concise log:
-    git log --oneline
+Concise log, with branching:
+    git log --oneline --graph
 
 Show changes between working dir and staging area:
 	git diff
@@ -55,3 +55,17 @@ Leave the diff display:
 	q
 or
 	:q
+
+
+Log commits specific to branch B (ie not found on master):
+    git log master..B
+
+Log commits that will be pushed:
+    git log hub/master..HEAD
+
+Squash last two commits:
+    git rebase -i HEAD~2
+    pick the older one (first on the list), squash the newer one.
+
+Push local master branch to (a new) remote 'main' branch:
+    git push hub master:main

@@ -5,4 +5,13 @@ Testing with unittest:
 
 Testing with django:
     in tests.py, inherit from django.test.TestCase
-    python manage.py test
+    python manage.py test (runs tests in all folders)
+    or: python manage.py test lists
+
+Testing with django live server:
+    in tests.py, inherit from django.test.LiveServerTestCase
+    replace:
+        self.browser.get('http://localhost:8008')
+    by:
+        self.browser.get(self.live_server_url)
+    python manage.py test functional_tests

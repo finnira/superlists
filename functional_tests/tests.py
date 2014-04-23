@@ -10,11 +10,11 @@ python manage.py runserver 8008
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-import unittest
+from django.test.testcases import LiveServerTestCase
 import time
 
 
-class NewVisitorTest(unittest.TestCase):
+class NewVisitorTest(LiveServerTestCase):
 
     def setUp(self):
         self.browser = webdriver.Firefox()
@@ -34,7 +34,7 @@ class NewVisitorTest(unittest.TestCase):
 
     def test_can_start_a_list_and_retrieve_it_later(self):
 
-        self.browser.get('http://localhost:8008')  # 8000 = Splunk
+        self.browser.get(self.live_server_url)
 
         # She notices the page title and header mention to-do lists
         self.assertIn('To-Do', self.browser.title)
@@ -70,10 +70,3 @@ class NewVisitorTest(unittest.TestCase):
         # explanatory text to that effect.
         # She visits that URL - her to-do list is still there.
         # Satisfied, she goes back to sleep
-
-
-if __name__ == '__main__':
-
-    unittest.main(warnings='ignore')
-    # "suppresses a superfluous ResourceWarning which was being emitted at
-    # the time of writing"
