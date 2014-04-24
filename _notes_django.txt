@@ -18,3 +18,9 @@ Models:
 
     View DDL:
         python manage.py sqlall lists
+
+
+URL:
+
+    Convention: urls without a trailing slash are “action” URLs which
+    modify the database.
