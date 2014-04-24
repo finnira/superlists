@@ -10,6 +10,9 @@ Create env:
 		pip install django
 		pip install selenium
 
+Upgrade selenium often to keep up with browser:
+        pip install --upgrade selenium
+
 
 To run all python scripts below:
 	cmd in E:\Testing\env\Scripts
@@ -46,3 +49,10 @@ Create django app:
 Run django server:
 		python manage.py runserver 8008
 	(will need to open another cmd window while running)
+
+
+Code outline of one file:
+    cmd:
+        findstr "class def" lists\tests.py
+    bash:
+        grep -E "class|def" lists/tests.py

@@ -28,8 +28,11 @@ git status gives warning about changing line endings from LF to CRLF:
 
 
 Add to .gitignore:
-	( echo "__pycache__" >> .gitignore )
-	only use the quotes if using bash, not cmd.
+    cmd:
+        echo __pycache__>> .gitignore
+    bash:
+        echo "__pycache__" >> .gitignore
+
 
 Copy from working dir to staging area:
 	git add .
