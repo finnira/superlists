@@ -37,6 +37,9 @@ Add to .gitignore:
 Copy from working dir to staging area:
 	git add .
 
+Remove a file from staging area:
+    git rm --cached db.sqlite3
+
 Copy from staging area to repo:
 	git commit -m {summary}
 
