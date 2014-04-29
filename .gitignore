@@ -3,3 +3,4 @@ __pycache__
 _cmd
 *.bat
 db.sqlite3
+lists/static/bootstrap
