@@ -39,6 +39,7 @@ Copy from working dir to staging area:
 
 Remove a file from staging area:
     git rm --cached db.sqlite3
+    (will actually delete the file if --cached is omitted)
 
 Copy from staging area to repo:
 	git commit -m {summary}
